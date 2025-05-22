@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/utilisateurs")
-@CrossOrigin(origins = "*") // à ajuster selon ton frontend
+@CrossOrigin(origins = "*") // à restreindre en production
 public class UtilisateurController {
 
     @Autowired
@@ -68,5 +68,22 @@ public class UtilisateurController {
     @GetMapping("/role/{role}")
     public ResponseEntity<List<Utilisateur>> getUtilisateursByRole(@PathVariable Utilisateur.Role role) {
         return ResponseEntity.ok(utilisateurService.getUtilisateursByRole(role));
+    }
+
+    // === Authentification (login) ===
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody Utilisateur loginRequest) {
+        Optional<Utilisateur> utilisateurOpt = utilisateurService.getUtilisateurByEmail(loginRequest.getEmail());
+
+        if (utilisateurOpt.isPresent()) {
+            Utilisateur utilisateur = utilisateurOpt.get();
+            if (utilisateur.getMotDePasse().equals(loginRequest.getMotDePasse())) {
+                return ResponseEntity.ok(utilisateur); // OK: credentials valid
+            } else {
+                return ResponseEntity.status(401).body("Mot de passe incorrect");
+            }
+        } else {
+            return ResponseEntity.status(404).body("Utilisateur non trouvé");
+        }
     }
 }

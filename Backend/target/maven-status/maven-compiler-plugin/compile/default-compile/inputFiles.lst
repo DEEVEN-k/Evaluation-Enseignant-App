@@ -14,6 +14,7 @@
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/model/Etudiant.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/model/Enseignant.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/model/Critere.java
+/home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/config/SecurityConfig.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/service/NoteService.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/model/Note.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/controller/CritereController.java
@@ -22,6 +23,8 @@
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/EvaluationApplication.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/service/UtilisateurService.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/repository/CritereRepository.java
+/home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/controller/AuthController.java
+/home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/security/JwtUtil.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/service/CoursService.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/repository/CoursRepository.java
 /home/eyadomaleki/PROJET ESI/APPLICATION_EVALUATION/Backend/src/main/java/com/esi/evaluation/service/EnseignantService.java
